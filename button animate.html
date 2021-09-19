@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button animation</title>
+</head>
+<style>
+    body {
+        background-color: bisque;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 100vh;
+        display: flex;
+    }
+    
+    .box {
+        height: 7em;
+        width: 20em;
+        border: 1px solid blue;
+        cursor: pointer;
+        letter-spacing: 2px;
+        font-size: larger;
+        overflow: hidden;
+        text-align: center;
+        font-family: serif;
+        font-weight: 500;
+    }
+    
+    .box span {
+        display: inline-block;
+        font-size: 190px;
+        line-height: 4em;
+        transition: 0.5s;
+        font-size: xx-large;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box span:nth-child(odd) {
+        transform: translateY(-100%);
+    }
+    
+    .box span:nth-child(even) {
+        transform: translateY(100%);
+    }
+    
+    .box::before {
+        content: attr(data-text);
+        position: absolute;
+        color: chartreuse;
+    }
+    
+    .box span:nth-child(odd) {
+        transform: translateY(-100%);
+    }
+    
+    .box span:nth-child(even) {
+        transform: translateY(100%);
+    }
+    
+    .box:hover span {
+        transform: translateY(0);
+    }
+</style>
+
+<body>
+    <div class="box">
+        <span data-text="U">U</span>
+        <span data-text="D">D</span>
+        <span data-text="H">H</span>
+        <span data-text="A">A</span>
+        <span data-text="Y">Y</span>
+        <span data-text="A">A</span>
+        <span data-text="N">N</span>
+    </div>
+
+</body>
+
+</html>
