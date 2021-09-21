@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS hover effect</title>
+</head>
+<style>
+    body {
+        display: grid;
+        min-height: 100vh;
+        place-items: center;
+    }
+    
+    .box {
+        position: relative;
+        width: 300px;
+        height: 250px;
+        margin-left: 20px;
+        float: left;
+        background-color: darkmagenta;
+        overflow: hidden;
+    }
+    
+    .box h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 35px;
+        color: chartreuse;
+        padding: 10px;
+        top: 7px;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .box img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        cursor: pointer;
+        width: 100%;
+        transition: .6s ease-in-out;
+    }
+    
+    .box img:hover {
+        bottom: -60px;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <h2>Sundar Pichai</h2>
+            <h2>Google</h2>
+            <div><img src="sundar-pichai.jpg" alt=""></div>
+        </div>
+        <div class="box">
+            <h2>Steve Jobs</h2>
+            <h2>Apple</h2>
+            <div><img src="steve-jobs.jpg" alt=""></div>
+        </div>
+        <div class="box">
+            <h2>Bill Gates</h2>
+            <h2>Microsoft</h2>
+            <div><img src="bill-gates.jpg" alt=""></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
